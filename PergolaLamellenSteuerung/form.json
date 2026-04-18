@@ -1,0 +1,155 @@
+{
+    "elements": [
+        {
+            "type": "Label",
+            "caption": "── KNX Instanzen ──────────────────────────────────────"
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "KNXInstanzFeld1",
+            "caption": "KNX Instanz-ID Feld 1 (2/2/22)",
+            "digits": 0,
+            "minimum": 0,
+            "suffix": ""
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "KNXInstanzFeld2",
+            "caption": "KNX Instanz-ID Feld 2 (2/2/23)",
+            "digits": 0,
+            "minimum": 0,
+            "suffix": ""
+        },
+        {
+            "type": "Label",
+            "caption": "── Externe Variablen ──────────────────────────────────"
+        },
+        {
+            "type": "SelectVariable",
+            "name": "RegenAlarmVariableID",
+            "caption": "Variable Regenalarm (Boolean)"
+        },
+        {
+            "type": "SelectVariable",
+            "name": "AussenTempVariableID",
+            "caption": "Variable Außentemperatur (Float, °C)"
+        },
+        {
+            "type": "Label",
+            "caption": "── Lüftungsautomatik ──────────────────────────────────"
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "LueftungTempGrenze",
+            "caption": "Temperaturgrenze für Lüftung (°C)",
+            "digits": 1,
+            "minimum": 0,
+            "maximum": 50,
+            "suffix": " °C"
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "LueftungPosition",
+            "caption": "Lüftungsstellung (% offen)",
+            "digits": 0,
+            "minimum": 0,
+            "maximum": 100,
+            "suffix": " %"
+        },
+        {
+            "type": "Label",
+            "caption": "── Szenen-Positionen ──────────────────────────────────"
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "SzeneOffen",
+            "caption": "Szene: Offen (%)",
+            "digits": 0,
+            "minimum": 0,
+            "maximum": 100,
+            "suffix": " %"
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "SzeneSonnenschutz",
+            "caption": "Szene: Sonnenschutz (%)",
+            "digits": 0,
+            "minimum": 0,
+            "maximum": 100,
+            "suffix": " %"
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "SzeneGeschlossen",
+            "caption": "Szene: Geschlossen (%)",
+            "digits": 0,
+            "minimum": 0,
+            "maximum": 100,
+            "suffix": " %"
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "SzeneRegen",
+            "caption": "Szene: Regen (%)",
+            "digits": 0,
+            "minimum": 0,
+            "maximum": 100,
+            "suffix": " %"
+        },
+        {
+            "type": "Label",
+            "caption": "── Timer / Automatik ──────────────────────────────────"
+        },
+        {
+            "type": "CheckBox",
+            "name": "TimerAktiv",
+            "caption": "Automatische Temperaturprüfung aktiv"
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "TimerIntervall",
+            "caption": "Prüfintervall (Minuten)",
+            "digits": 0,
+            "minimum": 1,
+            "maximum": 60,
+            "suffix": " min"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Label",
+            "caption": "── Manuelle Aktionen ──────────────────────────────────"
+        },
+        {
+            "type": "Button",
+            "caption": "Offen fahren",
+            "onClick": "PERGOLA_SzeneAusfuehren($id, 'OFFEN');"
+        },
+        {
+            "type": "Button",
+            "caption": "Sonnenschutz",
+            "onClick": "PERGOLA_SzeneAusfuehren($id, 'SONNENSCHUTZ');"
+        },
+        {
+            "type": "Button",
+            "caption": "Geschlossen fahren",
+            "onClick": "PERGOLA_SzeneAusfuehren($id, 'GESCHLOSSEN');"
+        },
+        {
+            "type": "Button",
+            "caption": "Lüftungsstellung",
+            "onClick": "PERGOLA_SzeneAusfuehren($id, 'LUEFTUNG');"
+        },
+        {
+            "type": "Button",
+            "caption": "Regenstellung",
+            "onClick": "PERGOLA_SzeneAusfuehren($id, 'REGEN');"
+        },
+        {
+            "type": "Button",
+            "caption": "Automation jetzt prüfen",
+            "onClick": "PERGOLA_AutomationPruefen($id);"
+        }
+    ],
+    "status": []
+}
