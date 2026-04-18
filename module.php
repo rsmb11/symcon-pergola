@@ -22,7 +22,7 @@ declare(strict_types=1);
  * =====================================================
  */
 
-class PergolaSteuerung extends IPSModule
+class PergolaSteuerung extends IPSModuleStrict
 {
     // ─── Konstanten ────────────────────────────────────────────────────────────
 
