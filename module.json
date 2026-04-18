@@ -1,0 +1,20 @@
+{
+    "id": "{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}",
+    "name": "Pergola Lamellen Steuerung",
+    "type": 3,
+    "vendor": "rsmb11",
+    "aliases": [
+        "Pergola",
+        "Lamellen",
+        "Alu Pergola"
+    ],
+    "description": "Steuerung einer Alu-Pergola-Überdachung über KNX mit Regenalarm, Lüftungsautomatik und WebFront-Szenen.",
+    "prefix": "PERGOLA",
+    "version": "1.0",
+    "compatibility": [
+        "5.0",
+        "6.0",
+        "7.0"
+    ],
+    "library": "{A1B2C3D4-E5F6-7890-ABCD-EF1234567800}"
+}
